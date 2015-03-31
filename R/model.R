@@ -82,7 +82,7 @@ trajectorymixture <- function(trajectories, K, bfn,
       ll <- log(probs)
 
       for (j in 1:K) {
-        m <- as.vector(X_i %*% weights[, j])
+        m <- as.vector(X_i %*% mean_coef[, j])
         V <- variance * diag(length(y_i))
         ll[j] <- ll[j] + mvtnorm::dmvnorm(y_i, m, V, log = TRUE)
       }
