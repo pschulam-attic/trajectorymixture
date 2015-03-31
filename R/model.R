@@ -33,7 +33,7 @@ trajectorymixture <- function(trajectories, K, bfn,
   X <- cbind(1, B)
   P <- matrix(0, ncol(X), ncol(X))
   P[-1, -1] <- bspline_penalty(ncol(B), 1)
-  P <- P + diag(1e-4, ncol(X))
+  P <- P + diag(1e-2, ncol(X))
 
   z <- matrix(runif(N * K), N, K)
   z <- sweep(z, 1, rowSums(z), "/")
