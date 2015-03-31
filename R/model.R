@@ -48,6 +48,8 @@ trajectorymixture <- function(trajectories, K, bfn,
     ss1 <- array(0, c(ncol(X), ncol(X), K))
     ss2 <- array(0, c(ncol(X), K))
 
+    ss1[, , ] <- P
+
     probs[] <- colSums(z) / sum(z)
 
     for (i in id) {
