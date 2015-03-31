@@ -52,7 +52,7 @@ trajectorymixture <- function(trajectories, K, bfn,
 
     for (i in id) {
       ix <- g == i
-      X_i <- X[ix, ]
+      X_i <- X[ix, , drop = FALSE]
       y_i <- y[ix]
       z_i <- z[id == i, ]
 
@@ -75,7 +75,7 @@ trajectorymixture <- function(trajectories, K, bfn,
 
     for (i in id) {
       ix <- g == i
-      X_i <- X[ix, ]
+      X_i <- X[ix, , drop = FALSE]
       y_i <- y[ix]
       ll <- log(probs)
 
