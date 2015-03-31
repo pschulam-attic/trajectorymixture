@@ -1,0 +1,12 @@
+Package: trajectorymixture
+Type: Package
+Title: Fit mixtures of mean trajectories to longitudinal data.
+Version: 0.1
+Date: 2015-03-31
+Author: Peter Schulam <pschulam@gmail.com>
+Maintainer: Peter Schulam <pschulam@gmail.com>
+Description: Use EM to estimate mixture models of longitudinal trajectories.
+License: GPL (>= 2)
+LazyData: TRUE
+Imports:
+  mvtnorm
